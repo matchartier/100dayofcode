@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Processing Individual Lines of a texarea</title>
+
+
+</head>
+<body>
+
+<form action="#">
+  <textarea name="inputbox" id="inputbox" cols="30" rows="10"></textarea>
+
+  <button onclick="process(); return false"></button>
+</form>
+
+
+<div id="result">
+
+
+</div>
+
+
+<script>
+
+
+  function process() {
+    var txtBox = document.getElementById("inputbox");
+    var lines = txtBox.value.split("\n");
+
+
+    resultString = "<p>";
+    for (var i = 0; i < lines.length; i++) {
+      resultString += lines[i] + "<br>";
+    }
+
+    resultString += "</p>";
+
+    var blk = document.getElementById("result");
+    blk.innerHTML = resultString ;
+
+
+
+  }
+
+
+</script>
+</body>
+</html>
