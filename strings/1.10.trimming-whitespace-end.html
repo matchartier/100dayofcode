@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trimming whitespace from the ends of a string</title>
+
+
+
+
+
+</head>
+<body>
+<div id="test">
+  fsdfds
+  asdf
+  sdf
+  sdf s
+  d
+</div>
+
+<script>
+
+  var txtBox = document.getElementById("test") ;
+  console.log(txtBox);
+
+  var lines = txtBox.value.split("\n") ;
+  var resultString = "" ;
+  var strng = "" ;
+  if (typeof String.trim == "undefined") { String.prototype.trim = function() { return this.replace(/(^\s*)|(\s*$)/g, ""); } }
+  for(var i = 0; i< lines.length; i++){
+    strng = lines[i].trim();
+    resultString += strng + "-";
+  }
+
+  console.log(resultString);
+
+</script>
+</body>
+</html>
