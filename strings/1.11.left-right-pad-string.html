@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Left- or Right pad a string</title>
+</head>
+<body>
+  <div id="result">
+
+  </div>
+
+  <script>
+
+    var prefLineLenght = 20 ;
+    var oldStr = "This is a string" ;
+
+    var diff = prefLineLenght - oldStr.length ;
+    var filler = "&nbsp;" ;
+
+    for(var i = 0; i < diff; i++){
+      oldStr = filler + oldStr;
+    }
+
+    document.getElementById("result").innerHTML=oldStr
+
+  </script>
+</body>
+</html>
