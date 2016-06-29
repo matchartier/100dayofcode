@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Testing if a substring exists</title>
+</head>
+<body>
+
+
+<script>
+
+  var cookbookString = new Array();
+
+  cookbookString[0] = "Joe's Cooking Book" ;
+  cookbookString[1] = "Sam's Cookbook" ;
+  cookbookString[2] = "Javascript Cookbook" ;
+  cookbookString[3] = "Javascript Bookcook" ;
+
+  // Search pattern
+
+  var pattern = /Cook.*Book/;
+
+  for (var i = 0; i< cookbookString.length; i++){
+    console.log(cookbookString[i] + " = " + pattern.test(cookbookString[i]));
+  }
+
+</script>
+</body>
+</html>
